@@ -1,0 +1,61 @@
+<html>
+	<head>
+	   <meta charset="utf-8">
+	    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	    <meta name="viewport" content="width=device-width, user-scalable=false">
+	    <meta name="description" content="The personal and professional website for Alex Kort, scientist, engineer and musician.">
+	    <meta name="author" content="Alex Kort">
+
+		<title>BPM Analyzer</title>
+		<!-- Bootstrap core CSS -->
+	    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	    <link href="../css/bootstrap.icon-large.min.css" rel="stylesheet">
+	    <link href="../css/bootstrap.css" rel="stylesheet">
+
+	    <link href="../css/stylish-portfolio.css" rel="stylesheet">
+
+		<script type="text/javascript" src="js/processAudio.js"></script>
+		<script type="text/javascript" src="js/processAudio.js"></script>
+		<script type="text/javascript" src="js/processAudio.js"></script>
+		<script type="text/javascript" src="js/lib/fft.js"></script>
+		<script type="text/javascript" src="js/lib/beatdetektor.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+   		<div class="bpm">
+      		<div id="wrapper" class="container">
+      			<div id="header">
+			   		<h1>Detect the BPM of your mic input!</h1>
+			   	</div>
+			   	<div id="content">
+			   		<h3>BPM of Incoming Audio:</h3>
+			   		<big><h1 id="bpm"></h1></big>
+			   		<br>
+			   		<h3>
+			   		    Instructions:<br>
+			   		</h3>
+			   		<h4>
+						<ol>
+						    <li>Connect a microphone to your device.</li>
+						    <li>Accept the access prompt and play any audio into the mic</li>
+						    <li>The beats per minute of the incoming audio will be shown below, updated in real-time!</li>
+						</ol>
+					</h4>
+				</div>
+				<br>		
+		   		<footer id="footer" style="font-size:14px">
+		   			<p>Notes:</p>
+		   			<ul type="square">
+					    <li>You can also change your input device to an audio interface on the top right of the address bar for direct monitoring of audio.</li>
+					    <li>For accurate BPM detection the volume needs to be sufficiently detectable and the source audio needs a steady beat, therefore this tool is best suited for dance tracks.</li>
+					    <li>By default, the detectable range is set to 110-140 BPM only.</li>
+					    <li>There may be a delay until the BPM stabilizes. I am still working on making it respond quicker.</li>
+					</ul>
+		   			<p>
+		   				This tool makes use of the <a href="https://github.com/cjcliffe/beatdetektor">beatdetektor</a> algorithm by cjcliffe. 
+		   			</p>
+		   		</footer>
+		   	</div>
+		</div>
+	</body>
+</html>
